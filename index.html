@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Michelle Lipenga's manifesto for the position of Secretary — Internet Society Malawi Chapter. Connect. Communicate. Deliver.">
+  <title>Michelle Lipenga | Secretary Manifesto 2026</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Sora:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #132536;
+      --ink-soft: #3a4f61;
+      --navy: #0a3d5c;
+      --teal: #1a7a7c;
+      --teal-light: #e8f4f4;
+      --sand: #f4f7f9;
+      --line: #d5e0e8;
+      --white: #ffffff;
+      --font-display: "Fraunces", Georgia, serif;
+      --font-body: "Sora", system-ui, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--ink);
+      background: var(--sand);
+      line-height: 1.65;
+    }
+
+    h1, h2, h3, .display-font {
+      font-family: var(--font-display);
+      letter-spacing: -0.02em;
+    }
+
+    /* —— Nav —— */
+    .site-nav {
+      background: rgba(244, 247, 249, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .site-nav.scrolled {
+      border-bottom-color: var(--line);
+      box-shadow: 0 1px 0 rgba(10, 61, 92, 0.04);
+    }
+
+    .site-nav .navbar-brand {
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 1.15rem;
+    }
+
+    .site-nav .nav-link {
+      color: var(--ink-soft);
+      font-size: 0.9rem;
+      font-weight: 500;
+      position: relative;
+      padding-inline: 0.75rem !important;
+    }
+
+    .site-nav .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0.75rem;
+      right: 0.75rem;
+      bottom: 0.35rem;
+      height: 2px;
+      background: var(--teal);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s ease;
+    }
+
+    .site-nav .nav-link:hover,
+    .site-nav .nav-link:focus {
+      color: var(--navy);
+    }
+
+    .site-nav .nav-link:hover::after {
+      transform: scaleX(1);
+    }
+
+    /* —— Hero —— */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--navy);
+    }
+
+    .hero-photo {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 62% 18%;
+      transform: scale(1.06);
+      animation: heroZoom 22s ease-out forwards;
+    }
+
+    @keyframes heroZoom {
+      from { transform: scale(1.06); }
+      to { transform: scale(1); }
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          105deg,
+          rgba(8, 28, 42, 0.92) 0%,
+          rgba(8, 28, 42, 0.78) 38%,
+          rgba(8, 28, 42, 0.35) 62%,
+          rgba(8, 28, 42, 0.18) 100%
+        );
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      padding-top: 5.5rem;
+      padding-bottom: 4rem;
+    }
+
+    .hero-brand {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(2.6rem, 7vw, 4.4rem);
+      color: var(--white);
+      line-height: 1.08;
+      margin-bottom: 1rem;
+      opacity: 0;
+      animation: riseIn 0.8s ease forwards 0.15s;
+    }
+
+    .hero-role {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: #7ec8c9;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+      opacity: 0;
+      animation: riseIn 0.8s ease forwards 0.3s;
+    }
+
+    .hero-tagline {
+      font-family: var(--font-display);
+      font-size: clamp(1.35rem, 3vw, 1.85rem);
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.95);
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: riseIn 0.8s ease forwards 0.45s;
+    }
+
+    .hero-lead {
+      max-width: 34rem;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 1.05rem;
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: riseIn 0.8s ease forwards 0.55s;
+    }
+
+    .btn-primary-custom {
+      background: var(--white);
+      border: none;
+      color: var(--navy);
+      font-weight: 500;
+      padding: 0.75rem 1.6rem;
+      border-radius: 0.35rem;
+      transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+      opacity: 0;
+      animation: riseIn 0.8s ease forwards 0.7s;
+    }
+
+    .btn-primary-custom:hover,
+    .btn-primary-custom:focus {
+      background: #7ec8c9;
+      color: var(--navy);
+      transform: translateY(-1px);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      border: 1.5px solid rgba(255, 255, 255, 0.85);
+      color: var(--white);
+      font-weight: 500;
+      padding: 0.7rem 1.5rem;
+      border-radius: 0.35rem;
+      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+      opacity: 0;
+      animation: riseIn 0.8s ease forwards 0.8s;
+    }
+
+    .btn-ghost:hover,
+    .btn-ghost:focus {
+      background: var(--white);
+      border-color: var(--white);
+      color: var(--navy);
+    }
+
+    @keyframes riseIn {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* —— Sections —— */
+    section {
+      padding: 4.5rem 0;
+    }
+
+    .section-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.75rem, 3.5vw, 2.35rem);
+      color: var(--navy);
+      margin-bottom: 1.25rem;
+      font-weight: 700;
+    }
+
+    .section-divider {
+      width: 3rem;
+      height: 3px;
+      background: var(--teal);
+      margin-bottom: 1.75rem;
+      border: none;
+    }
+
+    .context-band {
+      background: var(--white);
+      border-block: 1px solid var(--line);
+    }
+
+    .stat-callout {
+      border-left: 3px solid var(--teal);
+      padding-left: 1.25rem;
+      margin: 1.75rem 0;
+    }
+
+    .stat-callout strong {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      color: var(--navy);
+      display: block;
+      line-height: 1.2;
+    }
+
+    .vision-band {
+      background:
+        linear-gradient(135deg, var(--navy) 0%, #0d4f6e 55%, var(--teal) 100%);
+      color: var(--white);
+    }
+
+    .vision-band .section-label { color: rgba(255, 255, 255, 0.7); }
+    .vision-band .section-title { color: var(--white); }
+    .vision-band .section-divider { background: rgba(255, 255, 255, 0.55); }
+    .vision-band p { color: rgba(255, 255, 255, 0.92); font-size: 1.15rem; max-width: 40rem; }
+
+    /* —— Priorities —— */
+    .priority {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1.25rem 1.5rem;
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--line);
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+
+    .priority.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .priority:last-child { border-bottom: none; }
+
+    .priority-num {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--teal);
+      line-height: 1;
+      min-width: 2.5rem;
+    }
+
+    .priority h3 {
+      font-size: 1.35rem;
+      color: var(--navy);
+      margin-bottom: 0.65rem;
+      font-weight: 700;
+    }
+
+    .priority p {
+      color: var(--ink-soft);
+      margin-bottom: 0;
+    }
+
+    .initiative {
+      margin-top: 1.25rem;
+      padding: 1.15rem 1.25rem;
+      background: var(--teal-light);
+      border-radius: 0.35rem;
+    }
+
+    .initiative + .initiative { margin-top: 0.75rem; }
+
+    .initiative h4 {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 0.4rem;
+    }
+
+    .initiative p {
+      font-size: 0.92rem;
+      margin: 0;
+    }
+
+    /* —— Commitment —— */
+    .commitment-band {
+      background: var(--white);
+      border-block: 1px solid var(--line);
+    }
+
+    .closing-quote {
+      font-family: var(--font-display);
+      font-size: clamp(1.25rem, 2.5vw, 1.65rem);
+      color: var(--navy);
+      line-height: 1.45;
+      max-width: 38rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .sign-off {
+      margin-top: 2.5rem;
+    }
+
+    .sign-off .name {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.15rem;
+    }
+
+    .sign-off .role {
+      color: var(--teal);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .motto {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--ink-soft);
+      font-style: italic;
+      margin-top: 1.5rem;
+    }
+
+    /* —— Footer —— */
+    footer {
+      background: var(--navy);
+      color: rgba(255, 255, 255, 0.75);
+      padding: 2rem 0;
+      font-size: 0.9rem;
+    }
+
+    footer strong { color: var(--white); }
+
+    @media (max-width: 767.98px) {
+      .hero { min-height: 100svh; }
+      .hero-photo { object-position: 55% 12%; }
+      .hero-overlay {
+        background:
+          linear-gradient(
+            180deg,
+            rgba(8, 28, 42, 0.72) 0%,
+            rgba(8, 28, 42, 0.55) 35%,
+            rgba(8, 28, 42, 0.88) 100%
+          );
+      }
+      .hero-inner { padding-top: 6rem; padding-bottom: 3.5rem; }
+      .priority { grid-template-columns: 1fr; gap: 0.5rem; }
+      section { padding: 3.25rem 0; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg site-nav fixed-top" id="siteNav">
+    <div class="container">
+      <a class="navbar-brand" href="#top">Michelle Lipenga</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#context">Context</a></li>
+          <li class="nav-item"><a class="nav-link" href="#vision">Vision</a></li>
+          <li class="nav-item"><a class="nav-link" href="#priorities">Priorities</a></li>
+          <li class="nav-item"><a class="nav-link" href="#commitment">Commitment</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <img
+      class="hero-photo"
+      src="michelle.jpg"
+      alt="Michelle Lipenga, candidate for Secretary"
+      width="1600"
+      height="2000"
+      fetchpriority="high"
+    >
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <div class="col-lg-7 col-xl-6 px-0">
+        <p class="hero-role">Candidate for Secretary · 2026</p>
+        <h1 class="hero-brand">Michelle Lipenga</h1>
+        <p class="hero-tagline">Connect. Communicate. Deliver.</p>
+        <p class="hero-lead">
+          A manifesto for the position of Secretary — building a transparent, member-driven Chapter that advances an open, inclusive and secure Internet in Malawi.
+        </p>
+        <div class="d-flex flex-wrap gap-3">
+          <a href="#priorities" class="btn btn-primary-custom">Read my priorities</a>
+          <a href="#commitment" class="btn btn-ghost">My commitment</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="context-band" id="context">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <p class="section-label">The moment</p>
+          <h2 class="section-title">Malawi’s digital opportunity</h2>
+          <hr class="section-divider">
+          <p>
+            Malawi stands at an important moment in its digital transformation. The Internet creates opportunities for education, innovation and economic growth, yet challenges remain in accessibility, affordability, resilience and online safety.
+          </p>
+          <div class="stat-callout">
+            <strong>19%</strong>
+            of Malawi’s population used the Internet in 2024, according to Internet Society Pulse — highlighting the need for collective action.
+          </div>
+          <p>
+            Since its recognition in 2024 and official launch in July 2026, our Chapter has laid a foundation for an open, inclusive and secure Internet in Malawi. I recognise the efforts of the founding leadership and members who made this progress possible.
+          </p>
+          <p class="mb-0">
+            With a background in information technology, networking and systems development, I seek to contribute my skills, commitment and fresh perspective to this mission.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="vision-band" id="vision">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <p class="section-label">My vision</p>
+          <h2 class="section-title">A Chapter that delivers</h2>
+          <hr class="section-divider">
+          <p class="mb-0">
+            To support a sustainable, transparent, member-driven and digitally empowered Chapter that contributes to Malawi’s digital transformation and the global 2030 Strategy.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="priorities">
+    <div class="container">
+      <div class="row justify-content-center mb-2">
+        <div class="col-lg-8">
+          <p class="section-label">Five priorities</p>
+          <h2 class="section-title">If entrusted as Secretary</h2>
+          <hr class="section-divider">
+          <p class="text-secondary mb-0">I commit to these five priorities for our Chapter.</p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <article class="priority">
+            <div class="priority-num">01</div>
+            <div>
+              <h3>Strengthening Institutional Governance</h3>
+              <p>
+                I will promote accurate documentation, timely meeting records, structured action tracking and effective follow-up on resolutions, preserving institutional knowledge and ensuring continuity across leadership transitions.
+              </p>
+            </div>
+          </article>
+
+          <article class="priority">
+            <div class="priority-num">02</div>
+            <div>
+              <h3>Enhancing Communication and Member Engagement</h3>
+              <p>
+                I will advocate for regular member updates, a coordinated activity calendar and accessible feedback mechanisms, ensuring members have meaningful opportunities to remain informed, contribute ideas and participate in Chapter activities.
+              </p>
+            </div>
+          </article>
+
+          <article class="priority">
+            <div class="priority-num">03</div>
+            <div>
+              <h3>Digital Innovation and Knowledge Development</h3>
+              <p>
+                Building upon existing digital platforms, I will champion a complementary digital innovation portal to strengthen accountability, promote research and advance digital inclusion in Malawi. Drawing on my software development expertise, I propose three initiatives:
+              </p>
+              <div class="initiative">
+                <h4>Chapter Impact Tracker</h4>
+                <p>
+                  A data-driven platform to monitor activities, measure impact and identify geographical areas, communities and thematic priorities not yet reached by the Chapter — supporting evidence-based planning, resource mobilisation and informed decision-making.
+                </p>
+              </div>
+              <div class="initiative">
+                <h4>Internet Research Repository</h4>
+                <p>
+                  A centralised platform for documenting and sharing research, technical projects, publications and innovations undertaken by members, fostering collaboration, preserving institutional knowledge and encouraging research into Malawi’s Internet development challenges.
+                </p>
+              </div>
+              <div class="initiative">
+                <h4>Chichewa Digital Safety Toolkit</h4>
+                <p>
+                  An accessible, mobile-friendly resource providing practical cybersecurity education in Chichewa, empowering communities with knowledge of online fraud, digital privacy, cyber threats and responsible Internet use while addressing language barriers to digital literacy.
+                </p>
+              </div>
+              <p class="mt-3 mb-0">
+                These initiatives will be pursued collaboratively with the Executive Council, members and stakeholders, subject to feasibility and approval. My commitment is to leverage technology to strengthen institutional efficiency and deliver measurable, inclusive and sustainable impact across Malawi.
+              </p>
+            </div>
+          </article>
+
+          <article class="priority">
+            <div class="priority-num">04</div>
+            <div>
+              <h3>Supporting Strategic Alignment and Accountability</h3>
+              <p>
+                I will work with the Executive Council to align Chapter activities with national Internet development priorities and the global 2030 Strategy through structured planning, documentation and periodic progress reporting.
+              </p>
+            </div>
+          </article>
+
+          <article class="priority">
+            <div class="priority-num">05</div>
+            <div>
+              <h3>Promoting Capacity Building and Member Opportunities</h3>
+              <p>
+                I will support timely dissemination of training, mentorship, fellowship, volunteering and funding opportunities, encouraging participation by young professionals, students, women and underserved communities in Internet development.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="commitment-band" id="commitment">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <p class="section-label">My commitment</p>
+          <h2 class="section-title">Serve. Listen. Deliver.</h2>
+          <hr class="section-divider">
+          <p>
+            Leadership is a responsibility to serve, listen and deliver. I commit to integrity, professionalism, accountability and collaborative leadership, guided by the Chapter’s bylaws and shared values.
+          </p>
+          <p class="closing-quote">
+            Together, let us build upon the foundations already established and contribute to a Malawi where the Internet is not a privilege for a few, but a resource that empowers everyone.
+          </p>
+          <p class="motto">Connect. Communicate. Deliver.</p>
+          <div class="sign-off">
+            <p class="name">Michelle Lipenga</p>
+            <p class="role mb-0">Candidate for Secretary 2026</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container text-center text-md-start">
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <strong>Michelle Lipenga</strong> — Manifesto for the Position of Secretary
+        </div>
+        <div class="col-md-4 text-md-end mt-2 mt-md-0">
+          Internet Society Malawi Chapter · 2026
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const nav = document.getElementById("siteNav");
+    const onScroll = () => nav.classList.toggle("scrolled", window.scrollY > 24);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    document.querySelectorAll(".priority").forEach((el) => observer.observe(el));
+
+    document.querySelectorAll('.navbar-nav .nav-link').forEach((link) => {
+      link.addEventListener("click", () => {
+        const collapse = bootstrap.Collapse.getInstance(document.getElementById("navMenu"));
+        if (collapse) collapse.hide();
+      });
+    });
+  </script>
+</body>
+</html>
